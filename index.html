@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kalvin-chiang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="開發者的生活日常">
+<meta property="og:type" content="website">
+<meta property="og:title" content="開發筆記">
+<meta property="og:url" content="https://kalvin-chiang.github.io/index.html">
+<meta property="og:site_name" content="開發筆記">
+<meta property="og:description" content="開發者的生活日常">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="Kalvin Chiang">
+<meta property="article:tag" content="c,c++,mfc,c#">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://kalvin-chiang.github.io/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>開發筆記</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">開發筆記</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">kalvin-chiang.github.io</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://kalvin-chiang.github.io/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Kalvin Chiang">
+      <meta itemprop="description" content="開發者的生活日常">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="開發筆記">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/" class="post-title-link" itemprop="url">使用 intellij idea community 建立 servlet 專案</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-05-29 11:11:20" itemprop="dateCreated datePublished" datetime="2021-05-29T11:11:20+08:00">2021-05-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-06-01 16:45:42" itemprop="dateModified" datetime="2021-06-01T16:45:42+08:00">2021-06-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Intellij IDA community 版原則上是不支援 web 開發的，但是不支援也不代表不能，在這篇文章中，我將盡可能詳細地從零開始，將我測試過後可行的方案一步一步地分享給大家參考</p>
+<h3 id="安裝-JDK"><a href="#安裝-JDK" class="headerlink" title="安裝 JDK"></a>安裝 JDK</h3><p>您可以從<a target="_blank" rel="noopener" href="https://www.oracle.com/tw/java/technologies/javase-downloads.html">Oracle 官網</a>上下載所需的版本，此時我選擇的版本是 jdk-16.0.1_windows-x64_bin.exe，安裝完成後在命令列檢查是否安裝成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\&gt;javac --version</span><br><span class="line">javac 16.0.1</span><br></pre></td></tr></table></figure>
+
+<h3 id="安裝-Tomcat"><a href="#安裝-Tomcat" class="headerlink" title="安裝 Tomcat"></a>安裝 Tomcat</h3><p>從 <a target="_blank" rel="noopener" href="http://tomcat.apache.org/">Apache Tomcat</a> 下載與您要開發的 servlet 版本對應的 tomcat，再將它解壓縮後放到您想放的位置就可以了，舉個例來說，@WebServlet 註解需要 servlet3.0 以後的版本才支援，那從<a target="_blank" rel="noopener" href="http://tomcat.apache.org/whichversion.html">下表</a>中可以看出，對應的 tomcat 至少要 8.0.x 才可以，這裡我就乾脆選擇了 Tomcat 9，檔名是 apache-tomcat-9.0.46-windows-x64.zip，為了方便管理，我將它放置在 D:\Program Files\tomcat-core\apache-tomcat-9.0.46 裡</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/apache_tomcat_version.png" class="">
+
+<h3 id="安裝-IntelliJ-IDEA-community"><a href="#安裝-IntelliJ-IDEA-community" class="headerlink" title="安裝 IntelliJ IDEA community"></a>安裝 IntelliJ IDEA community</h3><p>從<a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/download/">官網</a>上下載回來，我選擇的是 .zip 檔，不用安裝，隨便找個地方擺著就可以了</p>
+<h3 id="配置-Intellij-IDEA-裡的-Tomcat-外掛"><a href="#配置-Intellij-IDEA-裡的-Tomcat-外掛" class="headerlink" title="配置 Intellij IDEA 裡的 Tomcat 外掛"></a>配置 Intellij IDEA 裡的 Tomcat 外掛</h3><p>開啟 idea，點選左側的 Plugins</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot1.png" class="">
+
+<p>在下圖圈紅色框框處輸入 tomcat，然後就會看到 Smart Tomcat，點選 install，安裝完成後會變成灰色的 Installed，之後再點選左側的 Projects 回到啟始畫面</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot2.png" class="">
+
+<h3 id="建立專案"><a href="#建立專案" class="headerlink" title="建立專案"></a>建立專案</h3><p>在 IDEA 的啟始畫面中點選 New Project，接下來的部份至關重要，請務必選擇正確</p>
+<ul>
+<li><p>左側選擇 Maven</p>
+</li>
+<li><p>Project SDK 確認是否是您已安裝的 JDK 版本</p>
+</li>
+<li><p>勾選 Create from archetype</p>
+</li>
+<li><p>選擇 org.apache.maven.archetypes:maven-archetype-webapp</p>
+</li>
+<li><p>確認底下的敘述是 A simple Java web applicatioin</p>
+</li>
+</ul>
+<p>確認以上無誤後，就點選 Next</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot3.png" class="">
+
+<p>這裡一般就只要填 Name 和 Location 這二項就可以了，填完後點 Next</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot4.png" class="">
+
+<p>這裡最好是加上一個新的引數，如果不加也可以，只是之後 IDE 在建立專案的過程會非常緩慢(相信我，試過一次後您就會發現還是加上去的好🤣)，完成後點擊 Finish，IDEA 就會開始準備您的專案</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Name:archetypeCatalog</span><br><span class="line">Value:internal</span><br></pre></td></tr></table></figure>
+
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot5.png" class="">
+
+<h3 id="配置啟動組態"><a href="#配置啟動組態" class="headerlink" title="配置啟動組態"></a>配置啟動組態</h3><p>操作到此，IDEA 已經幫您建置好一個基本的框架了，結構如下圖</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot6.png" class="">
+
+<p>這時候我們要補上一件事，我們要在 main 下方新增一個 Directory，同時還要將它 Mark Directory As Sources Root</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot6_2.png" class="">
+
+<p>此時工具列上的 Run 是呈現無法點選的狀態，我們必需先去設定好它的組態，點墼 Add Configuration</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot7.png" class="">
+
+<p>在 Run/Debug Configurations 頁面左側點選 “+”</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot8.png" class="">
+
+<p>在選單中選擇 Smart Tomcat</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot9.png" class="">
+
+<p>會出現以下畫面，點選 Configuration （注意圖中的說明，如果上一步沒確實完成的話，紅框標示出來的地方會是空白的）</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot10.png" class="">
+
+<p>然後會再跳出以下畫面，點選圖中所示的 “+” 號，定位到剛剛我們下載的 tomcat 存放位置，例如我的是 D:\Program Files\tomcat-core\apache-tomcat-9.0.46 後按下 OK</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot11.png" class="">
+
+<p>IDEA 會自動辦識內含的 Tomcat 版本，確認後再按下 OK</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot12.png" class="">
+
+<p>再從下拉選單中選擇我們剛剛加進去組態的 Tomcat 就完成了，為了方便辨識，您可以將此組態設置一個名字，例如我直接設成 Tomcat 9，好了之後按下 OK 即可</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot13.png" class="">
+
+<p>完成後，工具列上已可看到剛剛設置的組態名稱，並且 Run 和 Debug 鈕都是可用的</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot14.png" class="">
+
+<p>這時候我們可以按下 Run，建置完成後開啟瀏覽器，在網址列打入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8080/Example</span><br></pre></td></tr></table></figure>
+
+<p>可以看到以下畫面，就表示成功…一半了，因為這個輸出是 index.jsp 的輸出，而我們要的是 Servlet 可以正常運作</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot15.png" class="">
+
+<h3 id="將-Servlet-加入依賴"><a href="#將-Servlet-加入依賴" class="headerlink" title="將 Servlet 加入依賴"></a>將 Servlet 加入依賴</h3><p>通常我個人的習慣是，只要是和相依性有關的，我一律是加在專案內，而非全域，這是題外話。</p>
+<p>因為我們要用的功能是 Servlet，因此要加入 Servlet 的相依性，而我們的專案是用 Maven 建置的，相依性的管理是使用 pom.xml 這份檔案，關於它的相關知識，網路上可以找到很多，這裡就不再贅述了，我們現在要做的是，先到 <a target="_blank" rel="noopener" href="https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api">MVN Respository</a> 找到我們需要的 servlet 版本，點下去後可以看到下面的內容</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot16.png" class="">
+
+<p>沒錯，我們就是要那段 xml 語句，把它複製下來</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>貼到 pom.xml 裡的 <code>&lt;/dependency&gt;</code> 之前，這個時候會出現二個紅色表示 error 的符號，沒關係，點下下方的圖標或是在旁邊的 Maven 工具欄中找到 Reload Project 後就會變成正常</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot17.png" class="">
+
+<p>完成後我們還要再做一件事，打開 web.xml，這時候您看到的應該是和我一樣的畫面，這份配置檔在這裡並不是正確的，我們需要一份符合此專案的配置檔，那要到哪兒找呢？其實不難，在剛剛下載的 Tomcat 下就有了，以我的為例，存放的位置就在 D:\Program Files\tomcat-core\apache-tomcat-9.0.46\webapps\ROOT\WEB-INF 底下，用裡面的 web.xml 替換掉專案內的即可</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot18.png" class="">
+
+<p>替換後如下圖，但要注意，因為我們前面提到過，在我們的 Servlet 中想要使用 @WebServlet 註解這個功能，因此要把 metadata-complete 由原本的 true 改成 false，至於紅色 error 的部份，在提示中點選 Fetch external resource 即可解決</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot19.png" class="">
+
+<h3 id="撰寫-Servlet-類別"><a href="#撰寫-Servlet-類別" class="headerlink" title="撰寫 Servlet 類別"></a>撰寫 Servlet 類別</h3><p>接下來就到了我們的主軸了，在 Project 樹狀結構中找到 java 資料夾，新增 package，這裡以 com.example 為例，再加入 class，名稱為 HelloWorldServlet，將下方的程式碼填入</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(name = &quot;HelloWorldServlet&quot; , urlPatterns=&quot;/HelloWorld&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorldServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request,</span></span></span><br><span class="line"><span class="params"><span class="function">                         HttpServletResponse response)</span></span></span><br><span class="line"><span class="function">            <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html&quot;</span>);</span><br><span class="line">        PrintWriter out = response.getWriter();</span><br><span class="line">        out.println(<span class="string">&quot;&lt;h3&gt;Hello Servlet!&lt;/h3&gt;&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>完成後再按下 Run，開啟二個瀏覽器，一個輸入 <code>http://localhost:8080/Example</code> 另一個則為 <code>http://localhost:8080/Example/HelloWorld</code> 後應該可以看到以下畫面，一個是 index.jsp 輸出，另一個是 Servlet 輸出，到此也就大功告成，接下來我們就可以此為框架繼續我們的開發了</p>
+<img src="/2021/05/29/Create-java-servlet-project-with-maven-intellij-IDEA-community/screenshot20.png" class="">
+
+<h3 id="範例原始碼"><a href="#範例原始碼" class="headerlink" title="範例原始碼"></a>範例原始碼</h3><p><a target="_blank" rel="noopener" href="https://github.com/Kalvin-Chiang/Simple-Servlet-40">https://github.com/Kalvin-Chiang/Simple-Servlet-40</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Kalvin Chiang</p>
+  <div class="site-description" itemprop="description">開發者的生活日常</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kalvin Chiang</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kalvin-chiang.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+</body>
+</html>
